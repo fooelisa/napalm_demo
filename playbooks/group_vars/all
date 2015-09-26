@@ -1,0 +1,10 @@
+---
+
+user: root
+passwd: Napalmtest
+config_dir: /Users/elisa/plnog/napalm_demo/configs
+
+primary_dns_server: '8.8.8.8'
+primary_ntp_server: '81.234.134.160'
+secondary_ntp_server: '130.236.254.17'
+

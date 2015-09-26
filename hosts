@@ -1,0 +1,7 @@
+
+[core]
+junos.core
+
+[edge]
+junos.edge
+eos.edge

@@ -1,0 +1,21 @@
+transceiver qsfp default-mode 4x10G
+
+hostname {{hostname}}
+
+spanning-tree mode mstp
+
+aaa authorization exec default local
+
+aaa root secret 0 {{passwd}}
+
+username admin privilege 15 role admin secret 0 {{passwd}}
+
+interface Management1
+   ip address {{mgmt_ip}}
+
+no ip routing
+
+management api http-commands
+   no shutdown
+
+end

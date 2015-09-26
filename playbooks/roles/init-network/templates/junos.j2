@@ -1,0 +1,36 @@
+version 12.1R1.9;
+system {
+    host-name {{hostname}}
+    root-authentication {
+        encrypted-password {{enc_passwd}}; ## SECRET-DATA
+    }
+    services {
+        ssh {
+            root-login allow;
+        }
+        netconf {
+            ssh;
+        }
+    }
+    syslog {
+        user * {
+            any emergency;
+        }
+        file messages {
+            any any;
+            authorization info;
+        }
+        file interactive-commands {
+            interactive-commands any;
+        }
+    }
+}
+interfaces {
+    em0 {
+        unit 0 {
+          family inet {
+              address {{mgmt_ip}};
+          }
+        }
+    }
+}

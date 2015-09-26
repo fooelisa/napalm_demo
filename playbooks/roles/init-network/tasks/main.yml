@@ -1,0 +1,4 @@
+---
+
+- name: generate init configs from templates
+  template: src=../templates/{{os}}.j2 dest={{config_dir}}/{{hostname}}/init.conf
