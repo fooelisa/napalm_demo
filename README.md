@@ -17,9 +17,9 @@ ansible-playbook -i hosts playbooks/commit-replace-init-config.yml
 ### Deploy config
 
 This will generate the various config snippets (roles), merge them and upload them to the devices. The following roles are available in this demo:
-1. base-config
-2. system
-3. interfaces
+  1. base-config
+  2. system
+  3. interfaces
 
 
 * Batch deploy all available roles
