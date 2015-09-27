@@ -25,3 +25,15 @@ ansible-playbook -i hosts playbooks/generate-system-config.yml
 ```
 ansible-playbook -i hosts playbooks/commit-merge-system-config.yml
 ```
+
+### Interface config
+
+* Merge interface config into the existing base
+```
+ansible-playbook -i hosts playbooks/generate-interface-config.yml
+```
+
+* Commit merge the interface configuration
+```
+ansible-playbook -i hosts playbooks/commit-merge-interface-config.yml
+```

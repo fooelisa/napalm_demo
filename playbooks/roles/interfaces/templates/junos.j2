@@ -1,9 +1,11 @@
+{% for iface in interfaces %}
 interfaces {
     {{iface}} {
         unit 0 {
           family inet {
-              address {{}};
+              address {{iface.ip}};
           }
         }
     }
 }
+{% endfor %}

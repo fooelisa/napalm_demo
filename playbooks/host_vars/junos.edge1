@@ -10,6 +10,5 @@ mgmt_ip: 192.168.1.101/24
 ## interfaces
 
 interfaces:
-  - em1
-  - em2
-  - em3
+    em1:
+      ip: 10.0.1.2/24

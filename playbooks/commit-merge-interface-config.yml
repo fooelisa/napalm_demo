@@ -1,0 +1,17 @@
+---
+- name: Merge interface configuration
+  hosts: all
+  connection: local
+  gather_facts: no
+
+  tasks:
+  - name: Push configuration with napalm
+    napalm_install_config:
+        hostname={{hostname}}
+        username={{user}}
+        dev_os={{os}}
+        password={{passwd}}
+        config_file={{config_dir}}/{{hostname}}/interfaces.conf
+        commit_changes=True
+        replace_config=False
+        diff_file={{config_dir}}/{{hostname}}/interfaces.diff
