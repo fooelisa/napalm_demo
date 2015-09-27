@@ -10,5 +10,7 @@ mgmt_ip: 192.168.1.101/24
 ## interfaces
 
 interfaces:
-    em1:
+    - name: em1
       ip: 10.0.1.2/24
+    - name: em2
+      ip: 10.0.3.1/24

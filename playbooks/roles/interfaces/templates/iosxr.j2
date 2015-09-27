@@ -1,5 +1,4 @@
 {% for iface in interfaces %}
-interface {{iface}}
+interface {{iface.name}}
   ipv4 address {{iface.ip}}
-  no shutdown 
 {% endfor %}
