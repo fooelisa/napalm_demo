@@ -14,20 +14,14 @@ ansible-playbook -i hosts playbooks/generate-init-config.yml
 ansible-playbook -i hosts playbooks/commit-replace-init-config.yml
 ```
 
-### Deploy config
+### System config
 
-This will generate the various config snippets (roles), merge them and upload them to the devices. The following roles are available in this demo:
-  1. base-config
-  2. system
-  3. interfaces
-
-
-* Batch deploy all available roles
+* Merge more system config into the existing base
 ```
-ansible-playbook -i hosts playbooks/generate-config.yml
+ansible-playbook -i hosts playbooks/generate-system-config.yml
 ```
 
-* Commit the complete configuration
+* Commit merge the system configuration
 ```
-ansible-playbook -i hosts playbooks/commit-config.yml
+ansible-playbook -i hosts playbooks/commit-merge-system-config.yml
 ```
