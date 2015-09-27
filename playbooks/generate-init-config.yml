@@ -11,4 +11,4 @@
       file: path={{config_dir}}/{{hostname}} state=directory
 
   roles:
-  - init-network
+  - base-config
