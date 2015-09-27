@@ -1,6 +1,15 @@
 ---
 
+## base
+
 os: junos
 enc_passwd: "$1$.Wl5RsJA$ykgykggs8eTew9z7x3zXU."
-hostname: junos.core
+hostname: junos.edge2
 mgmt_ip: 192.168.1.102/24
+
+## interfaces
+
+interfaces:
+  - em1
+  - em2
+  - em3

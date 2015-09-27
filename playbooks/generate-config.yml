@@ -11,5 +11,5 @@
       file: path={{config_dir}}/{{hostname}} state=directory
 
   roles:
-    - base
+    - base-config
     - system

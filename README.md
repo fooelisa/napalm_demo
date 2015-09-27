@@ -2,7 +2,7 @@
 
 ### Base config
 
-To init the router with its base config, basic connectivity needs to be established beforehand. The demo routers will need to be set up and have a basic setup. This is meant to clear the config for demo purposes.
+To init the router with its base config, basic configuration tasks need to be performed beforehand. The demo routers need to be set up with connectivity and access credentials. This is mostly meant to clear the config for demo purposes.
 
 * Generate intial config
 ```

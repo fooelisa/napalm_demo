@@ -1,7 +1,7 @@
 
 [core]
-junos.core
+iosxr.core1
 
 [edge]
-junos.edge
-eos.edge
+junos.edge1
+junos.edge2

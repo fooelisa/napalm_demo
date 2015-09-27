@@ -1,0 +1,17 @@
+---
+
+## base
+
+os: iosxr
+user: napalm
+hostname: iosxr.core1
+mgmt_ip: 192.168.1.103/24
+
+## interfaces
+
+interfaces: 
+  - GigabitEthernet0/0/0/0
+  - GigabitEthernet0/0/0/1
+  - GigabitEthernet0/0/0/2
+
+

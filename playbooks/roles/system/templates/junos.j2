@@ -6,4 +6,14 @@ system {
         server {{ primary_ntp_server }};
         server {{ secondary_ntp_server }};
     }
+
+}
+protocols {
+    mstp {
+        configuration-name MSTP;
+    }
+    lldp {
+        port-id-subtype interface-name;
+        interface all;
+    }
 }
