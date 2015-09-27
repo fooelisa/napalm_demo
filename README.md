@@ -16,7 +16,7 @@ ansible-playbook -i hosts playbooks/commit-replace-init-config.yml
 
 ### System config
 
-* Merge more system config into the existing base
+* Generate more system config
 ```
 ansible-playbook -i hosts playbooks/generate-system-config.yml
 ```
@@ -28,7 +28,7 @@ ansible-playbook -i hosts playbooks/commit-merge-system-config.yml
 
 ### Interface config
 
-* Merge interface config into the existing base
+* Generate interface config
 ```
 ansible-playbook -i hosts playbooks/generate-interface-config.yml
 ```
@@ -36,4 +36,16 @@ ansible-playbook -i hosts playbooks/generate-interface-config.yml
 * Commit merge the interface configuration
 ```
 ansible-playbook -i hosts playbooks/commit-merge-interface-config.yml
+```
+
+### OSPF config
+
+* Generate ospf config
+```
+ansible-playbook -i hosts playbooks/generate-ospf-config.yml
+```
+
+* Commit merge the ospf configuration
+```
+ansible-playbook -i hosts playbooks/commit-merge-ospf-config.yml
 ```
