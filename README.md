@@ -1,4 +1,4 @@
-# N.A.P.A.L.M. + Ansible Demo
+# NAPALM + Ansible Demo
 
 ### Base config
 
@@ -26,26 +26,38 @@ ansible-playbook -i hosts playbooks/generate-system-config.yml
 ansible-playbook -i hosts playbooks/commit-merge-system-config.yml
 ```
 
-### Interface config
+### VLAN config
 
-* Generate interface config
+* Generate VLAN config
 ```
-ansible-playbook -i hosts playbooks/generate-interface-config.yml
-```
-
-* Commit merge the interface configuration
-```
-ansible-playbook -i hosts playbooks/commit-merge-interface-config.yml
+ansible-playbook -i hosts playbooks/generate-vlan-config.yml
 ```
 
-### OSPF config
-
-* Generate ospf config
+* Commit merge the VLAN configuration
 ```
-ansible-playbook -i hosts playbooks/generate-ospf-config.yml
+ansible-playbook -i hosts playbooks/commit-merge-vlan-config.yml
 ```
 
-* Commit merge the ospf configuration
+### BB Interface config
+
+* Generate BB interface config
 ```
-ansible-playbook -i hosts playbooks/commit-merge-ospf-config.yml
+ansible-playbook -i hosts playbooks/generate-interfaces-bb-config.yml
+```
+
+* Commit merge the BB interface configuration
+```
+ansible-playbook -i hosts playbooks/commit-merge-interfaces-bb-config.yml
+```
+
+### Customer Interface config
+
+* Generate customer interface config
+```
+ansible-playbook -i hosts playbooks/generate-interfaces-cust-config.yml
+```
+
+* Commit merge the customer interface configuration
+```
+ansible-playbook -i hosts playbooks/commit-merge-interfaces-cust-config.yml
 ```
