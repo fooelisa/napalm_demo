@@ -1,4 +1,0 @@
----
-
-- name: generate ospf configs from templates
-  template: src=../templates/{{os}}.j2 dest={{config_dir}}/{{hostname}}/ospf.conf

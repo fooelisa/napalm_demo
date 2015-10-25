@@ -1,9 +1,0 @@
-{% for iface in interfaces %}
-protocols {
-    ospf {
-        area 0.0.0.0 {
-            interface {{iface.name}};
-        }
-    }
-}
-{% endfor %}
