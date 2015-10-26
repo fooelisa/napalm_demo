@@ -1,17 +1,17 @@
 ---
-- name: Merge system configuration
+- name: Merge BB interface configuration
   hosts: all
   connection: local
   gather_facts: no
 
   tasks:
-  - name: Push system configuration with napalm
+  - name: Push BB interface configuration with napalm
     napalm_install_config:
         hostname={{hostname}}
         username={{user}}
         dev_os={{os}}
         password={{passwd}}
-        config_file={{config_dir}}/{{hostname}}/system.conf
+        config_file={{config_dir}}/{{hostname}}/interfaces-bb.conf
         commit_changes=True
         replace_config=False
-        diff_file={{config_dir}}/{{hostname}}/system.diff
+        diff_file={{config_dir}}/{{hostname}}/interfaces-bb.diff

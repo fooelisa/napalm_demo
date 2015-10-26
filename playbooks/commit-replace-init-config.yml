@@ -5,7 +5,7 @@
   gather_facts: no
 
   tasks:
-  - name: Push configuration with napalm
+  - name: Push init configuration with napalm
     napalm_install_config:
         hostname={{hostname}}
         username={{user}}
@@ -14,4 +14,4 @@
         config_file={{config_dir}}/{{hostname}}/init.conf
         commit_changes=True
         replace_config=True
-        diff_file={{config_dir}}/{{hostname}}/diff
+        diff_file={{config_dir}}/{{hostname}}/init.diff

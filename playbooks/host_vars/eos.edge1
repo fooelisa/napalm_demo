@@ -1,0 +1,21 @@
+---
+
+## base
+
+os: eos
+hostname: eos.edge1
+mgmt_ip: 192.168.10.133/24
+
+## interfaces
+
+interfacesbb:
+  - name: em1
+    description: LINK-1
+
+interfacescust:
+  - name: em2
+    description: ISP-3
+    vlan: 100
+  - name: em3
+    description: ISP-4
+    vlan: 200

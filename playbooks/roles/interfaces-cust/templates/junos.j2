@@ -1,0 +1,11 @@
+{% for iface in interfacescust %}
+interfaces {
+    {{ iface.name }} {
+        description {{ iface.description }};
+        vlan-tagging;
+        unit 0 {
+          vlan-id {{ iface.vlan }};
+        }
+    }
+}
+{% endfor %}

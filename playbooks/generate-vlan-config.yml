@@ -1,0 +1,14 @@
+---
+- name: Generate vlan config
+  hosts: all
+  gather_facts: no
+  connection: local
+
+  pre_tasks:
+    - name: remove potentially existing previous candidate config directories
+      file: path={{config_dir}}/{{hostname}} state=absent
+    - name: create candidate config directory
+      file: path={{config_dir}}/{{hostname}} state=directory
+
+  roles:
+    - vlans

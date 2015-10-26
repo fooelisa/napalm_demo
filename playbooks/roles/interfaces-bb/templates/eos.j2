@@ -1,0 +1,8 @@
+{% for iface in interfacesbb %}
+interface {{ iface.name }}
+description {{ iface.description }}
+switchport mode trunk
+switchport trunk allowed vlan {{ vlans|join(', ', attribute='id') }}
+speed auto
+no shutdown
+{% endfor %}

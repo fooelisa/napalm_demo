@@ -1,0 +1,48 @@
+---
+- name: Merge all configuration
+  hosts: all
+  connection: local
+  gather_facts: no
+
+  tasks:
+  - name: Push system configuration with napalm
+    napalm_install_config:
+        hostname={{hostname}}
+        username={{user}}
+        dev_os={{os}}
+        password={{passwd}}
+        config_file={{config_dir}}/{{hostname}}/system.conf
+        commit_changes=True
+        replace_config=False
+        diff_file={{config_dir}}/{{hostname}}/system.diff
+  - name: Push vlan configuration with napalm
+    napalm_install_config:
+        hostname={{hostname}}
+        username={{user}}
+        dev_os={{os}}
+        password={{passwd}}
+        config_file={{config_dir}}/{{hostname}}/vlan.conf
+        commit_changes=True
+        replace_config=False
+        diff_file={{config_dir}}/{{hostname}}/vlan.diff
+  - name: Push BB interface configuration with napalm
+    napalm_install_config:
+        hostname={{hostname}}
+        username={{user}}
+        dev_os={{os}}
+        password={{passwd}}
+        config_file={{config_dir}}/{{hostname}}/interfaces-bb.conf
+        commit_changes=True
+        replace_config=False
+        diff_file={{config_dir}}/{{hostname}}/interfaces-bb.diff
+  - name: Push customer interface configuration with napalm
+    napalm_install_config:
+        hostname={{hostname}}
+        username={{user}}
+        dev_os={{os}}
+        password={{passwd}}
+        config_file={{config_dir}}/{{hostname}}/interfaces-cust.conf
+        commit_changes=True
+        replace_config=False
+        diff_file={{config_dir}}/{{hostname}}/interfaces-cust.diff
+

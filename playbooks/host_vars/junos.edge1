@@ -9,11 +9,11 @@ mgmt_ip: 192.168.10.122/24
 
 ## interfaces
 
-ix-interfaces-bb:
+interfacesbb:
   - name: em1
     description: LINK-1
 
-ix-interfaces-cust:
+interfacescust:
   - name: em2
     description: ISP-1
     vlan: 100
