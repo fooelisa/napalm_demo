@@ -61,3 +61,16 @@ ansible-playbook -i hosts playbooks/generate-interfaces-cust-config.yml
 ```
 ansible-playbook -i hosts playbooks/commit-merge-interfaces-cust-config.yml
 ```
+
+### Now let's push them all at once
+
+* Generate all configs
+```
+ansible-playbook -i hosts playbooks/generate-all-config.yml
+```
+
+* Commit merge all configs
+```
+ansible-playbook -i hosts playbooks/commit-merge-all-config.yml
+```
+
