@@ -19,4 +19,8 @@ vlans:
     description: production
   - id: 200
     description: test
+  - id: 300
+    description: test2
+  - id: 400
+    description: test3
 
