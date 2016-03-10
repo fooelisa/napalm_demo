@@ -4,7 +4,7 @@
 
 user: root
 passwd: Napalmtest
-config_dir: /Users/elisa/euroix/napalm_demo/configs
+config_dir: /Users/elisa/inex/napalm_demo/configs
 
 ## system 
 

@@ -1,17 +1,17 @@
 ---
-- name: Merge vlan configuration
+- name: Merge BGP configuration
   hosts: all
   connection: local
   gather_facts: no
 
   tasks:
-  - name: Push vlan configuration with napalm
+  - name: Push BGP configuration with napalm
     napalm_install_config:
         hostname={{hostname}}
         username={{user}}
         dev_os={{os}}
         password={{passwd}}
-        config_file={{config_dir}}/{{hostname}}/vlans.conf
+        config_file={{config_dir}}/{{hostname}}/bgp.conf
         commit_changes=True
         replace_config=False
-        diff_file={{config_dir}}/{{hostname}}/vlans.diff
+        diff_file={{config_dir}}/{{hostname}}/bgp.diff

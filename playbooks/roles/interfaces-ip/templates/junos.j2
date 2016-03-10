@@ -1,10 +1,11 @@
-{% for iface in interfacescust %}
+{% for iface in interfacesip %}
 interfaces {
     {{ iface.name }} {
         description {{ iface.description }};
-        vlan-tagging;
         unit 0 {
-          vlan-id {{ iface.vlan }};
+          	family inet {
+                address {{iface.ip}};
+          	}
         }
     }
 }

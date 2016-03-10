@@ -1,0 +1,18 @@
+---
+- name: Get BGP data
+  hosts: all
+  gather_facts: no
+  connection: local
+
+  tasks:
+  - name: get facts from device
+    napalm_get_facts:
+      hostname={{hostname}}
+      username={{user}}
+      dev_os={{os}}
+      password={{passwd}}
+      filter='bgp_neighbors'
+    register: result
+
+  - name: print data
+    debug: var=result

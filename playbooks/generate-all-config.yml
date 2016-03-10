@@ -12,6 +12,5 @@
 
   roles:
     - system
-    - vlans
-    - interfaces-bb
-    - interfaces-cust
+    - interfaces-ip
+    - bgp

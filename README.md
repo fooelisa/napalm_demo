@@ -26,40 +26,28 @@ ansible-playbook -i hosts playbooks/generate-system-config.yml
 ansible-playbook -i hosts playbooks/commit-merge-system-config.yml
 ```
 
-### VLAN config
+### IP Interface config
 
-* Generate VLAN config
+* Generate ip interface config
 ```
-ansible-playbook -i hosts playbooks/generate-vlan-config.yml
-```
-
-* Commit merge the VLAN configuration
-```
-ansible-playbook -i hosts playbooks/commit-merge-vlan-config.yml
+ansible-playbook -i hosts playbooks/generate-interfaces-ip-config.yml
 ```
 
-### BB Interface config
-
-* Generate BB interface config
+* Commit merge the ip interface configuration
 ```
-ansible-playbook -i hosts playbooks/generate-interfaces-bb-config.yml
+ansible-playbook -i hosts playbooks/commit-merge-interfaces-ip-config.yml
 ```
 
-* Commit merge the BB interface configuration
+### BGP config
+
+* Generate BGP config
 ```
-ansible-playbook -i hosts playbooks/commit-merge-interfaces-bb-config.yml
+ansible-playbook -i hosts playbooks/generate-bgp-config.yml
 ```
 
-### Customer Interface config
-
-* Generate customer interface config
+* Commit merge the BGP configuration
 ```
-ansible-playbook -i hosts playbooks/generate-interfaces-cust-config.yml
-```
-
-* Commit merge the customer interface configuration
-```
-ansible-playbook -i hosts playbooks/commit-merge-interfaces-cust-config.yml
+ansible-playbook -i hosts playbooks/commit-merge-bgp-config.yml
 ```
 
 ### Now let's push them all at once
@@ -74,3 +62,10 @@ ansible-playbook -i hosts playbooks/generate-all-config.yml
 ansible-playbook -i hosts playbooks/commit-merge-all-config.yml
 ```
 
+
+### Retreive BGP session info
+
+* Get BGP data
+```
+ansible-playbook -i hosts playbooks/get-bgp-data.yml
+```

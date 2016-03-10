@@ -1,0 +1,24 @@
+routing-options {
+    autonomous-system {{local_as}};
+}
+protocols {
+    bgp {
+        group external-peers {
+            type external;
+        }
+    }
+}
+
+{% for neigh in neighbors %}
+protocols {
+    bgp {
+        group external-peers {
+            neighbor {{neigh.ip}} {
+                peer-as {{neigh.as}};
+                description {{neigh.name}};
+            }
+        }
+    }
+}
+{% endfor %}
+

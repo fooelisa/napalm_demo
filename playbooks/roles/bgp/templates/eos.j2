@@ -1,0 +1,7 @@
+ip routing
+router bgp {{local_as}}
+
+{% for neigh in neighbors %}
+neighbor {{neigh.ip}} remote-as {{neigh.as}}
+neighbor {{neigh.ip}} description {{neigh.name}}
+{% endfor %}

@@ -1,5 +1,5 @@
 ---
-- name: Generate BB interface config
+- name: Generate BGP config
   hosts: all
   gather_facts: no
   connection: local
@@ -11,4 +11,4 @@
       file: path={{config_dir}}/{{hostname}} state=directory
 
   roles:
-    - interfaces-bb
+    - bgp

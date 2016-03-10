@@ -1,6 +1,7 @@
-{% for iface in interfacescust %}
+{% for iface in interfacesip %}
 interface {{ iface.name }}
 description {{ iface.description }}
-switchport access vlan {{ iface.vlan }}
+ip address {{iface.ip}}
+no switchport
 no shutdown
 {% endfor %}

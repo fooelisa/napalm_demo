@@ -3,19 +3,27 @@
 ## base
 
 os: eos
+enc_passwd: $1$d1S0Reyb$3mg2GajinsJ63RQ6Nd7Z50
 hostname: eos.edge1
 mgmt_ip: 192.168.10.133/24
 
 ## interfaces
 
-interfacesbb:
-  - name: Ethernet1
-    description: LINK-1
-
-interfacescust:
+interfacesip:
   - name: Ethernet2
     description: ISP-3
-    vlan: 100
+    ip: 192.168.20.2/24
   - name: Ethernet3
     description: ISP-4
-    vlan: 200
+    ip: 192.168.30.2/24
+
+## bgp
+
+local_as: 200
+neighbors:
+  - name: BGP-ISP-3
+    ip: 192.168.20.1
+    as: 100
+  - name: BGP-ISP-4
+    ip: 192.168.30.1
+    as: 100

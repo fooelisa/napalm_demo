@@ -15,34 +15,24 @@
         commit_changes=True
         replace_config=False
         diff_file={{config_dir}}/{{hostname}}/system.diff
-  - name: Push vlan configuration with napalm
+  - name: Push ip interface configuration with napalm
     napalm_install_config:
         hostname={{hostname}}
         username={{user}}
         dev_os={{os}}
         password={{passwd}}
-        config_file={{config_dir}}/{{hostname}}/vlans.conf
+        config_file={{config_dir}}/{{hostname}}/interfaces-ip.conf
         commit_changes=True
         replace_config=False
-        diff_file={{config_dir}}/{{hostname}}/vlans.diff
-  - name: Push BB interface configuration with napalm
+        diff_file={{config_dir}}/{{hostname}}/interfaces-ip.diff
+  - name: Push bgp configuration with napalm
     napalm_install_config:
         hostname={{hostname}}
         username={{user}}
         dev_os={{os}}
         password={{passwd}}
-        config_file={{config_dir}}/{{hostname}}/interfaces-bb.conf
+        config_file={{config_dir}}/{{hostname}}/bgp.conf
         commit_changes=True
         replace_config=False
-        diff_file={{config_dir}}/{{hostname}}/interfaces-bb.diff
-  - name: Push customer interface configuration with napalm
-    napalm_install_config:
-        hostname={{hostname}}
-        username={{user}}
-        dev_os={{os}}
-        password={{passwd}}
-        config_file={{config_dir}}/{{hostname}}/interfaces-cust.conf
-        commit_changes=True
-        replace_config=False
-        diff_file={{config_dir}}/{{hostname}}/interfaces-cust.diff
+        diff_file={{config_dir}}/{{hostname}}/bgp.diff
 
